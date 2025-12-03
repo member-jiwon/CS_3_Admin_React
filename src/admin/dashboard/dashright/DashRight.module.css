@@ -2,5 +2,15 @@
     width:100%;
     height:100%;
     border-radius: 20px;
-    border:1px solid black;
+    border:1px solid #8C8C8C;
+    padding: 26px;
+}
+
+.herderText {
+    color: #696B70;
+    font-size: 22px;
+}
+
+.dashBox{
+    padding: 35px;
 }

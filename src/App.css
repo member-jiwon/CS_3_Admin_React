@@ -2,3 +2,7 @@
 .ql-editor b {
   font-weight: bold !important;
 }
+
+*{
+  box-sizing: border-box;
+}
