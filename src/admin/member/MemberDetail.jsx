@@ -51,15 +51,15 @@ const MemberDetail = ({ member, setNewRender, onClose }) => {
                         </p>
 
                         {/* 연락처 */}
-<p className={styles.infoKey}>연락처</p>
-<p className={styles.infoValue}>
-  {member.contact.split('-').map((part, index, arr) => (
-    <span key={index}>
-      {part}
-      {index < arr.length - 1 && <span className={styles.dash}> - </span>}
-    </span>
-  ))}
-</p>
+                        <p className={styles.infoKey}>연락처</p>
+                        <p className={styles.infoValue}>
+                            {member.contact.split('-').map((part, index, arr) => (
+                                <span key={index}>
+                                    {part}
+                                    {index < arr.length - 1 && <span className={styles.dash}> - </span>}
+                                </span>
+                            ))}
+                        </p>
                     </div>
                 </div>
 

@@ -15,8 +15,8 @@
 }
 
 .modal {
-  width: 30%;
-  height:70%;
+  width: 28%;
+  height:64%;
   background: white;
   padding: 10px 20px 20px 20px;
   border-radius: 20px;
@@ -29,7 +29,7 @@
 /* 🎯 새로운 콘텐츠 컨테이너 (버튼과의 간격을 여기서 관리) */
 .modalContent {
     flex-grow: 1;
-    margin-bottom: 0px; /* 버튼 컨테이너와의 간격 */
+    margin-bottom: 10px; /* 버튼 컨테이너와의 간격 */
     /* border:1px solid black; */
 }
 
@@ -46,7 +46,7 @@
 .infoList {
   display: flex;
   flex-direction: column;
-  margin-top: 40px; 
+  margin-top: 50px; 
 }
 
 /* 정보 키 (아이디, 닉네임 등) */
@@ -54,8 +54,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #696B70;
-  margin: 0;
-  margin-top: 40px; 
+  margin-top: 20px; 
 }
 
 .infoKey:first-child {
@@ -71,7 +70,8 @@
 .infoValue {
   font-size: 16px;
   color: #696B70;
-  margin-top: 10px; 
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /* 하단 버튼 컨테이너 */
@@ -81,8 +81,7 @@
  
  /* 🎯 수정: 버튼을 중앙에 모으고, 간격을 줍니다. */
  justify-content: center; 
- gap: 20px; /* 200px 버튼 2개 + 간격 15px로 조정 */
- 
+ gap: 30px; /* 200px 버튼 2개 + 간격 15px로 조정 */
  /* width는 자동으로 내부 컨텐츠(415px)를 따라가도록 유지하거나, 
      필요하다면 최대 너비 지정 */
  /* border: 1px solid black; (디버깅용이므로 제거 권장) */
@@ -90,7 +89,7 @@
 
 /* 🎯 버튼 공통 스타일 (200px 너비 유지) */
 .actionButton {
- width: 260px; 
+ width: 230px; 
  height: 48px;
  border: none;
  border-radius: 20px; 
