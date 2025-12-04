@@ -26,7 +26,7 @@ const Report = () => {
   };
   const handleDeleteComment = (id) => {
     // eslint-disable-next-line no-restricted-globals
-    if (confirm(`게시글 ${id}를 삭제하시겠습니까?`)) {
+    if (window.confirm(`게시글 ${id}를 삭제하시겠습니까?`)) {
       sendAdminMessage("/pub/admin/notify/send/comment", Number(id));
       handleCloseComment();
       setTimeout(() => {
