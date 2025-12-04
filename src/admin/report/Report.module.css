@@ -45,6 +45,11 @@
   cursor: pointer;
 }
 
+.board:hover,.board:active {
+  background-color: #94a4d6;
+  transform: scale(0.98);
+}
+
 .comment {
   width: 200px;
   height: 48px;
@@ -56,6 +61,12 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.comment:hover,.comment:active {
+  background-color: #94a4d6;
+  transform: scale(0.98);
+}
+
 
 .activeTab {
   background-color: #ADB9E3;

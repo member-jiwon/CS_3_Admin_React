@@ -135,12 +135,23 @@
 }
 
 .back {
-    background-color: #B9B9B9;
+    background-color: #d9d9d9;
+}
+
+.back:hover, .back:active {
+  background-color: #b0b0b0;
+    transform: scale(0.98);
 }
 
 .del {
     background-color: #ADB9E3;
 }
+
+.del:hover, .del:active {
+  background-color: #94a4d6;
+    transform: scale(0.98);
+}
+
 
 .maincontainer h2 {
   margin-bottom: 16px; /* 제목과 다음 요소 사이 간격 */

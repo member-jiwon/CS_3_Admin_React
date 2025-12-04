@@ -73,9 +73,9 @@ const DashLeftDown = () => {
     };
 
     return (
-        <div className={styles.rightcontainer} style={{ height: "400px" }}>
-            <div>멤버 연령대 분포도</div>
-            <Bar data={data} options={options} style={{ margin: "20px 15px 25px 3px" }} />
+        <div className={styles.rightcontainer} style={{ height: "300px" }}>
+            <div className={styles.mem}>전체 연령층</div>
+            <Bar data={data} options={options} style={{ margin: "10px 15px 25px 3px" }} />
         </div>
     );
 };

@@ -74,7 +74,7 @@ const DashLeftTwo = () => {
     };
     return (
         <div className={styles.twocontainer}>
-            <div>댓글 신고 태그 누적</div>
+            <div className={styles.ddsh}>댓글 신고</div>
             <Bar data={data} options={options} style={{ margin: "20px 8px 40px 8px", width: "100%", height: "100%" }} />
         </div>
     );

@@ -27,32 +27,33 @@
   height: 75px;
 }
 
-/* 컬럼 정렬 */
+/* 컬럼 정렬 - 헤더 및 데이터 */
 .listColNumber,
 .listColUsername,
-.listColNickname {
-  text-align: left;
+.listColNickname,
+.listColDate,
+.listColReport {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 데이터 중앙 정렬 */
   padding: 0 8px;
 }
 
 /* 작성일과 신고횟수 오른쪽 끝으로 살짝 이동 */
 .listColDate {
-  text-align: center;
-  padding: 0 8px;
   margin-left: auto; /* 남는 공간 다 차지 */
   width: 150px;      /* 조금 넓게 */
 }
 
 .listColReport {
-  text-align: center;
-  padding: 0 12px;   /* 간격 조절 */
-  width: 120px;        /* 넓혀서 찌그러짐 방지 */
+  width: 120px;      /* 넓혀서 찌그러짐 방지 */
+  padding: 0 12px;
 }
 
 /* 컬럼 너비 */
 .listColNumber { width: 80px; }
-.listColUsername { width: 25%; }
-.listColNickname { width: 25%; }
+.listColUsername { width: 8%; }
+.listColNickname { width: 20%; }
 
 /* 페이지네이터 */
 .pagination {

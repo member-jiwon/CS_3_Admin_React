@@ -76,7 +76,7 @@ const DashLeftOne = () => {
 
     return (
         <div className={styles.onecontainer}>
-            <div>게시물 신고 태그 누적</div>
+            <div className={styles.ddsh}>게시판 신고</div>
             <Bar data={data} options={options} style={{ margin: "20px 8px 40px 8px", width: "100%", height: "100%" }} />
         </div>
     );

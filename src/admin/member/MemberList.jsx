@@ -20,7 +20,7 @@ const MemberList = () => {
     <div className={styles.cardGrid}>
       {/* 헤더 */}
       <div className={styles.listHeader}>
-        <div className={styles.listColNumber}></div>
+        <div className={styles.listColNumber}>번호</div>
         <div className={styles.listColUsername}>아이디</div>
         <div className={styles.listColNickname}>닉네임</div>
         <div className={styles.listColDate}>가입일</div>

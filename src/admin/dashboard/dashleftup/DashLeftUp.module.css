@@ -1,13 +1,11 @@
 .leftcontainer {
     width: 100%;
-    height:50%;          
+    height: 50%;
     display: flex;
-    flex-direction: row;   
-    gap: 20px;            
-    box-sizing: border-box;
+    flex-direction: row;
+    gap: 20px;
 }
 
-/* 개별 DashLeftOne / DashLeftTwo에 flex: 1 적용 */
 .leftcontainer > * {
-    flex: 1;               
+    flex: 1;
 }

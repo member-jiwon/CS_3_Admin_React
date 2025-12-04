@@ -28,30 +28,59 @@ const DashboardIndex = () => {
         ],
     };
 
-    const options = {
-        responsive: true,
-        cutout: "45%",
-        plugins: {
-            legend: { position: "bottom" },
-            datalabels: {
+    
+   const options = {
+    responsive: true,
+    cutout: "50%",    
+    plugins: {
+        legend: {
+            position: "bottom",
+            labels: {
+                usePointStyle: true,   // 네모 → 원으로 변경
+                pointStyle: 'rect',  // 확실히 circle 지정
+                pointStyleWidth: 16,   // 원 크기
                 color: "#696B70",
-                formatter: (value, context) => {
-                    const s = slices[context.dataIndex];
-                    const percentage = ((s.value / sum) * 100).toFixed(1);
-                    return `${percentage}%`;
-                },
-                font: { weight: "bold" },
-            },
+                font: { size: 16, weight: "bold", family: "Arial" },
+                padding: 5,           // 항목 간 간격
+            }
         },
-    };
+        datalabels: {
+            color: "#696B70",
+            formatter: (value, context) => {
+                const s = slices[context.dataIndex];
+                const percentage = ((s.value / sum) * 100).toFixed(1);
+                return `${percentage}%`;
+            },
+            font: { 
+                weight: "bold",
+                size: 12,
+                family: "Arial",
+                letterSpacing: -0.5,
+            },
+            anchor: "center",
+            align: "center",
+        },
+        tooltip: {
+            enabled: true,
+            callbacks: {
+                label: function(context) {
+                    const s = slices[context.dataIndex];
+                    return `${s.label}: ${s.value}`;
+                }
+            }
+        }
+    }
+};
 
     return (
         <div className={styles.rightcontainer}>
-            <div className={styles.herderText}>페이지 관리</div>
-            <div className={styles.dashBox}>
-                <Pie data={data} options={options}/>
-            </div>
+    <div className={styles.herderText}>페이지 관리</div>
+    <div className={styles.dashBox}>
+        <div className={styles.chartWrapper}>
+            <Pie data={data} options={options} />
         </div>
+    </div>
+</div>
     );
 };
 

@@ -1,16 +1,44 @@
+/* DashRight.module.css */
+
 .rightcontainer {
-    width:100%;
-    height:100%;
-    border-radius: 20px;
-    border:1px solid #8C8C8C;
+    width: 100%;
+    height: 100%;            /* 부모 .right 높이 꽉 채움 */
     padding: 26px;
+    border-radius: 20px;
+    border: 1px solid #8C8C8C;
+    box-sizing: border-box;  /* padding 포함 전체 높이 계산 */
+    display: flex;
+    flex-direction: column;  /* 헤더 + 차트를 세로 배치 */
+    padding: 20px;        /* 상하좌우 여백 */
+    box-sizing: border-box;
 }
 
 .herderText {
     color: #696B70;
     font-size: 22px;
+    font-weight: bold;
+    flex-shrink: 0;           /* 헤더 높이 고정 */
 }
 
-.dashBox{
-    padding: 35px;
+.dashBox {
+    flex: 1;                 /* 남은 공간 모두 차지 */
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.chartWrapper {
+    width: 100%;             /* 부모 폭 꽉 채움 */
+    height: 100%;            /* 부모 높이 꽉 채움 */
+    max-width: 100%;         /* 넘치지 않도록 제한 */
+    max-height: 100%;        /* 넘치지 않도록 제한 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chartjs-legend {
+    white-space: nowrap; /* 한 줄로 강제 */
 }

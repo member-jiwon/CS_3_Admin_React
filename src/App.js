@@ -6,6 +6,7 @@ import Login from './admin/login/login';
 import useAuthStore from './store/useAuthStore';
 import MainIndex from './mainIndex/MainIndex'; // 새로 만든 MainIndex
 import { connectAdminWebSocket } from './webSocket/connectWebSocket';
+import "./styles/them.css";
 
 function App() {
   const {isLogin, login} = useAuthStore(state => state);

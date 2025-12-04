@@ -4,4 +4,12 @@
     /* 혜빈추가 */
     height: 408px;
     position: relative;
+    padding: 20px;        /* 상하좌우 여백 */
+    box-sizing: border-box;
+}
+.ddsh {
+    margin-left: 10px;
+    color: #696b70;
+    font-weight: bold;
+    font-size: 22px;
 }
