@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import BoardList from "./BoardList";
 import BoardDetail from "./BoardDetail";
 import CommentList from "./CommentList";
-import CommentDetail from "./CommentDetail"; // 추가
+import CommentDetail from "./CommentDetail";
 import styles from "./Report.module.css";
 import { sendAdminMessage } from "../../webSocket/connectWebSocket";
 
 const Report = () => {
-  const [viewType, setViewType] = useState("board"); // board | comment
+  const [viewType, setViewType] = useState("board");
   const [selectedPost, setSelectedPost] = useState(null);
   const [selectedComment, setSelectedComment] = useState(null);
   const [newRender, setNewRender] = useState(false);
@@ -37,7 +37,6 @@ const Report = () => {
 
   return (
     <div className={styles.container}>
-      {/* 상단 탭 */}
       <div className={styles.header}>
         <div className={styles.leftGroup}>
           <div className={styles.categoryList}>
@@ -57,7 +56,6 @@ const Report = () => {
         </div>
       </div>
 
-      {/* 게시판 */}
       {viewType === "board" && (
         selectedPost ? (
           <BoardDetail
@@ -74,7 +72,6 @@ const Report = () => {
         )
       )}
 
-      {/* 댓글 */}
       {viewType === "comment" && (
         <>
           <CommentList

@@ -18,7 +18,6 @@ const MemberList = () => {
 
   return (
     <div className={styles.cardGrid}>
-      {/* 헤더 */}
       <div className={styles.listHeader}>
         <div className={styles.listColNumber}>번호</div>
         <div className={styles.listColUsername}>아이디</div>
@@ -27,7 +26,6 @@ const MemberList = () => {
         <div className={styles.listColReport}>신고횟수</div>
       </div>
 
-      {/* 데이터 행 */}
       {currentItems.length > 0 ? currentItems.map((member, index) => (
         <div
           key={index}
@@ -42,7 +40,6 @@ const MemberList = () => {
         </div>
       )) : <div>가입유저가 존재하지 않습니다.</div>}
 
-      {/* 페이지네이터 */}
       <div className={styles.pagination}>
         <button className={styles.pageControl} onClick={() => setCurrentPage(1)} disabled={currentPage === 1}>{"<<"}</button>
         <button className={styles.pageControl} onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1}>{"<"}</button>
@@ -63,7 +60,6 @@ const MemberList = () => {
         <button className={styles.pageControl} onClick={() => setCurrentPage(totalPages)} disabled={currentPage === totalPages}>{">>"}</button>
       </div>
 
-      {/* 모달 */}
       {selectedMember && (
         <MemberDetail member={selectedMember} setNewRender={setNewRender} onClose={() => setSelectedMember(null)} />
       )}

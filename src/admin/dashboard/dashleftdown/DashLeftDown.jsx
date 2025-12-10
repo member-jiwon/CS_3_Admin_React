@@ -5,7 +5,7 @@ import "../../../chartSetup";
 import useDashLeftDown from "./useDashLeftDown";
 
 const DashLeftDown = () => {
-    const { bars } = useDashLeftDown(); 
+    const { bars } = useDashLeftDown();
     const sum = bars.reduce((acc, b) => acc + b.value, 0);
 
     const data = {
@@ -30,21 +30,21 @@ const DashLeftDown = () => {
                     stepSize: 5
                 },
                 grid: {
-                    drawTicks: true,        // 축 눈금은 보여주기
-                    drawBorder: true,       // 축 외곽선 유지
-                    drawOnChartArea: false, // 내부 격자선 제거
+                    drawTicks: true,
+                    drawBorder: true,
+                    drawOnChartArea: false,
                 },
             },
             x: {
-                ticks: { 
-                    autoSkip: false, 
-                    maxRotation: 0, 
-                    minRotation: 0 
+                ticks: {
+                    autoSkip: false,
+                    maxRotation: 0,
+                    minRotation: 0
                 },
                 grid: {
-                    drawTicks: true,        // 축 눈금
-                    drawBorder: true,       // 축 외곽선
-                    drawOnChartArea: false, // 내부 격자선 제거
+                    drawTicks: true,
+                    drawBorder: true,
+                    drawOnChartArea: false,
                 },
             },
         },

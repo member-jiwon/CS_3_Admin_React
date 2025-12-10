@@ -1,10 +1,9 @@
 .onecontainer {
     border-radius: 20px;
     border: 1px solid #8C8C8C;
-    /* 혜빈추가 */
     height: 408px;
     position: relative;
-    padding: 20px;        /* 상하좌우 여백 */
+    padding: 20px;
     box-sizing: border-box;
 }
 

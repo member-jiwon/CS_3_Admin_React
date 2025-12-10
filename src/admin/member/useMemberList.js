@@ -12,9 +12,7 @@ function useMemberList(newRender) {
     useEffect(() => {
         caxios.get("/user/userList")
             .then(resp => {
-                console.log(resp.data);
                 const formattedData = resp.data.map(user => {
-                    // 연락처 포맷팅
                     let formattedContact = user.contact;
                     if (formattedContact && formattedContact.length === 11) {
                         formattedContact = `${formattedContact.slice(0, 3)}-${formattedContact.slice(3, 7)}-${formattedContact.slice(7)}`;
@@ -24,7 +22,6 @@ function useMemberList(newRender) {
                         contact: formattedContact
                     };
                 });
-
                 setData(formattedData);
             })
             .catch(err => {

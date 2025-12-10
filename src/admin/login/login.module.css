@@ -1,6 +1,4 @@
-
-
-* { 
+* {
     font-weight: 400;
     box-sizing: border-box;
     margin: 0;
@@ -17,39 +15,34 @@
 }
 
 .loginbox {
-    width:485px;
-    height:580px;
+    width: 485px;
+    height: 580px;
     border-radius: 20px;
     box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.25);
-    display: flex;            
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: white;
 }
 
 .logininbox {
-    /* border: 1px solid black; */
-    width:80%;
-    height:auto;
+    width: 80%;
+    height: auto;
 }
-/* -------------------------------------------------- */
-/* 로그인 제목 */
+
 .logintop {
-    display:flex;
+    display: flex;
     justify-content: center;
-    /* border:1px solid black; */
 }
 
 .toptitle {
     font-size: 32px;
     font-weight: bold;
-    color:#696B70;
+    color: #696B70;
 }
-/* -------------------------------------------------- */
-/* 아이디 비밀번호 입력칸 */
+
 .loginmiddle {
     margin-top: 40px;
-    /* border:1px solid black; */
 }
 
 .loginmiddle label {
@@ -63,75 +56,71 @@
 
 .loginmiddle input {
     width: 100%;
-    height:48px;
+    height: 48px;
     padding-left: 10px;
     border-radius: 20px;
-    border:1px solid #8C8C8C;
+    border: 1px solid #8C8C8C;
     outline: none;
 }
 
 .loginmiddle input::placeholder {
     font-size: 16px;
-    color:#8C8C8C;
+    color: #8C8C8C;
 }
 
 .middletwo {
     margin-top: 24px;
 }
-/* -------------------------------------------------- */
-/*로그인 버튼 부분*/
 
 .loginbottom {
     margin-top: 48px;
-    /* border:1px solid black; */
 }
 
 .logbut {
-    width:100%;
-    height:48px;
+    width: 100%;
+    height: 48px;
     border-radius: 20px;
-    border:none;
+    border: none;
     background-color: #F0D827;
-    color:white;
+    color: white;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
 }
-/* -------------------------------------------------- */
-/*버튼 아래 나머지*/
 
 .signup {
     margin-top: 24px;
     margin-left: 10px;
     font-size: 16px;
-    color:#8C8C8C;
+    color: #8C8C8C;
 }
 
 .signup a {
     margin-left: 10px;
     text-decoration: none;
-    color:#ADB9E3;
+    color: #ADB9E3;
 }
 
 .changelog {
     margin-top: 24px;
     margin-left: 10px;
     text-decoration: none;
-    color:#8C8C8C;
-    display: inline-block;  /* 또는 block */
+    color: #8C8C8C;
+    display: inline-block;
 }
 
 .changepw {
     text-decoration: none;
-    color:#8C8C8C;
-    display: inline-block;  /* 또는 block */
-}
-.changelog + .changepw::before {
-  content: "|";
-  margin: 0 8px;
-  color: #999;
+    color: #8C8C8C;
+    display: inline-block;
 }
 
-.alert input{
+.changelog+.changepw::before {
+    content: "|";
+    margin: 0 8px;
+    color: #999;
+}
+
+.alert input {
     border: solid 1px #499ef8 !important;
 }

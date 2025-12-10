@@ -1,19 +1,18 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom"; // ★ useLocation 추가
+import { Link, useLocation } from "react-router-dom";
 import { LogOut } from "lucide-react";
 import styles from "./CommonHeader.module.css";
 import log from "./img/log.svg";
 import useAuthStore from "../store/useAuthStore";
 
 const CommonHeader = () => {
-  const location = useLocation(); // ★ 현재 주소 가져오기
-  const logout = useAuthStore(state=>state.logout);
+  const location = useLocation();
+  const logout = useAuthStore(state => state.logout);
 
   return (
     <div className={styles.topbar}>
       <div className={styles.headerContentWrapper}>
 
-        {/* 좌측 메뉴 */}
         <div className={styles.leftSection}>
           <img src={log} className={styles.logoIcon} alt="로고 이미지" />
 
@@ -34,8 +33,7 @@ const CommonHeader = () => {
           </div>
         </div>
 
-        {/* 우측 로그아웃 */}
-        <div className={styles.logoutBox} onClick={()=>logout()}>
+        <div className={styles.logoutBox} onClick={() => logout()}>
           <span className={styles.menuItem}>로그아웃</span>
           <LogOut className={styles.logoutIcon} size={24} />
         </div>

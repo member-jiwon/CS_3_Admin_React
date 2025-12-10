@@ -12,7 +12,6 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
-/* 콘텐츠 래퍼 */
 .headerContentWrapper {
   width: 100%;
   height: 100%;
@@ -23,7 +22,6 @@
   margin: 0 auto;
 }
 
-/* 좌측 섹션 (로고 + 메뉴) */
 .leftSection {
   height: 100%;
   display: flex;
@@ -31,13 +29,11 @@
   gap: 40px;
 }
 
-/* 로고 */
 .logoIcon {
   width: 40px;
   height: 40px;
 }
 
-/* 메뉴 아이템 컨테이너 */
 .menuItems {
   height: 100%;
   display: flex;
@@ -45,7 +41,6 @@
   gap: 24px;
 }
 
-/* 메뉴 아이템 */
 .menuItemBox {
   height: 100%;
   display: flex;
@@ -68,7 +63,6 @@
   color: #f0d827;
 }
 
-/* 메뉴 밑줄 */
 .menuItemBox::after {
   content: "";
   position: absolute;
@@ -85,7 +79,6 @@
   width: 100%;
 }
 
-/* 로그아웃 박스 */
 .logoutBox {
   height: 100%;
   display: flex;
@@ -95,22 +88,19 @@
   position: relative;
 }
 
-/* 로그아웃 글씨 */
 .logoutBox .menuItem {
   font-size: 16px;
   color: #696b70;
   transition: color 0.3s ease;
 }
 
-/* hover 시 글씨 + 아이콘 색상 변경 */
 .logoutBox:hover .menuItem,
 .logoutBox:hover .logoutIcon {
   color: #f0d827;
-  stroke: #f0d827; /* lucide-react 아이콘 색상 */
+  stroke: #f0d827;
   font-weight: bold;
 }
 
-/* 로그아웃 밑줄 */
 .logoutBox::after {
   content: "";
   position: absolute;
@@ -126,7 +116,6 @@
   width: 100%;
 }
 
-/* 로그아웃 아이콘 */
 .logoutIcon {
   width: 30px;
   height: 30px;

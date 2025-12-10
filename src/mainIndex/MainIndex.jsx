@@ -9,7 +9,6 @@ import styles from "./MainIndex.module.css";
 const MainIndex = () => {
   const location = useLocation();
 
-  // yellow/white 배경 선택
   const yellowBackgroundPaths = ["/report"];
   const isYellowBackground = yellowBackgroundPaths.some((path) =>
     location.pathname.startsWith(path)
@@ -20,16 +19,14 @@ const MainIndex = () => {
 
   return (
     <div className={styles.container}>
-      {/* 상단 헤더 */}
       <header className={styles.MemberHeader}>
         <CommonHeader />
       </header>
 
-      {/* 메인 콘텐츠 */}
       <div className={mainLayoutClassName}>
         <Routes>
           <Route path="/" element={<DashboardIndex />} />
-          <Route path="/report/*" element={<Report />} />  {/* <-- /report/* 로 수정 */}
+          <Route path="/report/*" element={<Report />} />
           <Route path="/member/*" element={<Member />} />
         </Routes>
       </div>

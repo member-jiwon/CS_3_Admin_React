@@ -1,6 +1,6 @@
-// src/admin/report/CommentList.jsx
+
 import React, { useState } from "react";
-import styles from "./BoardList.module.css"; // 기존 스타일 그대로 재사용
+import styles from "./BoardList.module.css";
 import useCommentList from "./useCommentList";
 
 const ITEMS_PER_PAGE = 10;
@@ -37,7 +37,6 @@ const CommentList = ({ newRender, onSelectComment }) => {
         </div>
       )) : <div>신고 댓글이 존재하지 않습니다.</div>}
 
-      {/* 페이지네이터 */}
       <div className={styles.pagination}>
         <button
           className={styles.pageControl}
