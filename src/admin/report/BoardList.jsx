@@ -35,9 +35,8 @@ const BoardList = ({ newRender, onSelectPost }) => {
           <div className={styles.listColDate}>{item.created_at}</div>
           <div className={styles.listColReport}>{item.view_count}</div>
         </div>
-      )): <div>신고 댓글이 존재하지 않습니다.</div>}
+      )) : <div>신고 댓글이 존재하지 않습니다.</div>}
 
-      {/* 페이지네이터 */}
       <div className={styles.pagination}>
         <button
           className={styles.pageControl}

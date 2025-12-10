@@ -24,12 +24,3 @@
   --border-radius-body: 16px;
   transform: scale(0.98);
 }
-
-/* => 스타일 예시 이렇게 작성
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  background-color: var(--color-gray-100);
-} */

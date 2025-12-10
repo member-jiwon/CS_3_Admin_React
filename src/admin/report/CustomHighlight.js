@@ -27,7 +27,7 @@ export const CustomHighlight = Highlight.extend({
         };
     }
 });
-//json 파싱용
+
 export const extensions = [
     StarterKit.configure({
         codeBlock: false,

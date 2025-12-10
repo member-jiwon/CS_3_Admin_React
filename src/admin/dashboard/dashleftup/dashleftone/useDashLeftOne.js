@@ -25,9 +25,9 @@ function useDashLeftOne() {
                 updatedBars.sort((a, b) => b.value - a.value);
 
                 const coloredBars = updatedBars.map((bar, index) => {
-                    if (index === 0) return { ...bar, color: "#EA8125" }; // 제일 많음 → 컬러1
-                    if (index === updatedBars.length - 1) return { ...bar, color: "#FFDA76" }; // 제일 적음 → 컬러3
-                    return { ...bar, color: "#FDC575" }; // 중간 → 컬러2
+                    if (index === 0) return { ...bar, color: "#EA8125" };
+                    if (index === updatedBars.length - 1) return { ...bar, color: "#FFDA76" };
+                    return { ...bar, color: "#FDC575" };
                 });
 
                 setBars(coloredBars);

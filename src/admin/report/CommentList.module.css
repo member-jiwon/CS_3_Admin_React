@@ -1,11 +1,9 @@
-/* 카드 그리드 */
 .cardGrid {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* 리스트 헤더 */
 .listHeader {
   display: flex;
   align-items: center;
@@ -16,7 +14,6 @@
   border-bottom: 1px solid #ccc;
 }
 
-/* 데이터 행 */
 .listRow {
   display: flex;
   align-items: center;
@@ -24,8 +21,11 @@
   height: 58px;
 }
 
-/* 컬럼 정렬 */
-.listColTitle { text-align: left; margin-right: 8px; }
+.listColTitle {
+  text-align: left;
+  margin-right: 8px;
+}
+
 .listColNumber,
 .listColAuthor,
 .listColDate,
@@ -34,18 +34,38 @@
   padding: 0 8px;
 }
 
-.listColAuthor { margin-left: 8px; }
-.listColDate { margin-left: 8px; }
-.listColReport { margin-left: 8px; }
+.listColAuthor {
+  margin-left: 8px;
+}
 
-/* 컬럼 너비 */
-.listColNumber { width: 100px; }
-.listColTitle { width: 60%; }
-.listColAuthor { width: 15%; }
-.listColDate { width: 10%; }
-.listColReport { width: 10%; }
+.listColDate {
+  margin-left: 8px;
+}
 
-/* 페이지네이터 */
+.listColReport {
+  margin-left: 8px;
+}
+
+.listColNumber {
+  width: 100px;
+}
+
+.listColTitle {
+  width: 60%;
+}
+
+.listColAuthor {
+  width: 15%;
+}
+
+.listColDate {
+  width: 10%;
+}
+
+.listColReport {
+  width: 10%;
+}
+
 .pagination {
   display: flex;
   justify-content: center;

@@ -20,11 +20,9 @@ const CommentDetail = ({ comment, setSelectedComment, onClose, onDelete }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        {/* 1. 작성자 및 메타 정보 */}
         <h3 className={styles.modalAuthor}>{comment.user_id}</h3>
         <div className={styles.modalMeta}>
           <span className={styles.modalDate}>{comment.created_at}</span>
-          {/* <span className={styles.modalDate}>신고횟수 : {comment.is_deleted}</span> */}
           <span className={styles.modalReport}>신고사유 :
             {comment.report_types &&
               Object.entries(
@@ -39,14 +37,10 @@ const CommentDetail = ({ comment, setSelectedComment, onClose, onDelete }) => {
           </span>
         </div>
 
-        {/* 2. 댓글 내용 */}
         <p className={styles.modalComment}>{comment.comment_content}</p>
 
-        {/* 3. 버튼 영역 */}
         <div className={styles.buttons}>
-          {/* 뒤로가기 버튼 (스크린샷에서는 '뒤로가기'로 표시) */}
           <button className={styles.btnBack} onClick={onClose}>뒤로가기</button>
-          {/* 삭제 버튼 */}
           <button className={styles.btnDelete} onClick={() => onDelete ? onDelete(comment.id) : alert(`댓글 ${comment.id} 삭제`)}>삭제</button>
         </div>
       </div>

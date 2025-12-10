@@ -16,17 +16,13 @@ function useDashRight() {
 
         caxios.get("/dash/pathList")
             .then(resp => {
-                console.log(resp.data);
-
-                // defaultBars 순서 기준으로 매핑
                 const updatedSlices = defaultBars.map(item => {
                     const found = resp.data.find(d => d.path_name === item.label);
                     return found ? { ...item, value: Number(found.count) } : item;
                 });
 
-                setSlices(updatedSlices); // 순서 고정!
-            })
-            .catch(err => console.log(err));
+                setSlices(updatedSlices);
+            });
     }, []);
 
     return { slices };

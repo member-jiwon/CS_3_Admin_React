@@ -18,14 +18,11 @@ export const connectAdminWebSocket = (adminToken) => {
     adminClient.activate();
 };
 
-// 메시지 전송만
 export const sendAdminMessage = (destination, payload) => {
     if (adminClient && adminClient.connected) {
         adminClient.publish({
-            destination, // 서버 MessageMapping 경로
+            destination,
             body: JSON.stringify(payload)
         });
-    } else {
-        console.warn('Admin WebSocket 연결 안 됨');
-    }
+    } else {}
 };

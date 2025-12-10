@@ -3,12 +3,11 @@
     height: 50%;             
     border: 1px solid #8C8C8C;  
     border-radius: 20px;
-    padding: 20px;        /* 상하좌우 여백 */
+    padding: 20px;       
     box-sizing: border-box;
 }
 .mem {
     color: #696b70;
     font-weight: bold;
     font-size: 22px;
-    /* border:1px solid black; */
 }
