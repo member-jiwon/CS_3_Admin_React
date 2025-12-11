@@ -4,7 +4,7 @@ import SockJS from 'sockjs-client';
 let adminClient = null;
 
 export const connectAdminWebSocket = (adminToken) => {
-    const socket = new SockJS(`http://10.5.5.4/ws-stomp?token=${adminToken}`);
+    const socket = new SockJS(`https://cs-689104601634.asia-northeast3.run.app/wss-stomp?token=${adminToken}`);
 
     adminClient = new Client({
         webSocketFactory: () => socket,

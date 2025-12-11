@@ -3,6 +3,7 @@ import { caxios } from "../../config/config";
 import useAuthStore from "../../store/useAuthStore";
 import { useNavigate } from "react-router-dom";
 import { connectAdminWebSocket } from "../../webSocket/connectWebSocket";
+import { CopyX } from "lucide-react";
 
 function useLogin() {
     // 로그인 준비
@@ -27,6 +28,9 @@ function useLogin() {
             alert("아이디와 비밀번호 모두 입력해주세요.");
             return;
         }
+
+        // caxios.get("/admin/test")
+        // .then(resp=>console.log(resp.data));
 
         caxios.post("/admin/login", { admin_id: data.id, password: data.pw })
             .then(resp => {

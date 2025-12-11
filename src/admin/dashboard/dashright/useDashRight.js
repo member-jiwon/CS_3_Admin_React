@@ -7,11 +7,11 @@ function useDashRight() {
     useEffect(() => {
         const defaultBars = [
             { label: "커뮤니티", value: 0, color: "#E88D8D" },
-            { label: "성장 차트", value: 0, color: "#EA8125" },
-            { label: "건강 기록", value: 0, color: "#FDC575" },
+            { label: "성장차트", value: 0, color: "#EA8125" },
+            { label: "건강기록", value: 0, color: "#FDC575" },
             { label: "산모일기/하루일기", value: 0, color: "#FFDA76" },
-            { label: "회원 마이페이지", value: 0, color: "#ADB9E3" },
-            { label: "아기 정보", value: 0, color: "#95A5E0" },
+            { label: "마이페이지", value: 0, color: "#ADB9E3" },
+            { label: "아기정보", value: 0, color: "#95A5E0" },
         ];
 
         caxios.get("/dash/pathList")

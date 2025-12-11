@@ -160,3 +160,27 @@
 .maincontainer p {
   margin: 8px 0; /* 각 p 태그 사이 간격 */
 }
+
+.emptyMessage {
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 세로 중앙 */
+  align-items: center;      /* 가로 중앙 */
+  text-align: center;
+  padding: 50px 20px;       /* 모바일에서도 여백 유지 */
+  color: var(--color-font-color2);
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.emptyMessage svg {
+  margin-bottom: 16px;
+  flex-shrink: 0; /* 크기 축소 방지 */
+}
+
+.emptyMessage div {
+  font-weight: bold;
+  margin-bottom: 8px; /* div와 p 사이 간격 */
+}

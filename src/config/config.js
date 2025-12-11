@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const caxios = axios.create({
-  baseURL: `http://10.5.5.4:85/`
+  baseURL: `https://cs-admin-689104601634.asia-northeast3.run.app/`
 });
 
 //모든 일반 api 호출
