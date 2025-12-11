@@ -1,10 +1,10 @@
 import axios from "axios";
+import useAuthStore from "../store/useAuthStore";
 
 export const caxios = axios.create({
   baseURL: `https://cs-admin-689104601634.asia-northeast3.run.app/`
 });
 
-//모든 일반 api 호출
 caxios.interceptors.request.use((config) => {
   if (!config.headers["Authorization"]) {
     const token = sessionStorage.getItem("token");
@@ -14,3 +14,14 @@ caxios.interceptors.request.use((config) => {
   }
   return config;
 });
+
+caxios.interceptors.response.use(
+  response => response,
+  error => {
+    if (error.response && (error.response.status === 401 || error.response.data === "TOKEN_EXPIRED")) {
+      useAuthStore.removeItem("token");
+      window.location.href = "/";
+    }
+    return Promise.reject(error);
+  }
+);

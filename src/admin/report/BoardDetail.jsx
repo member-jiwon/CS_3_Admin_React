@@ -23,15 +23,13 @@ const BoardDetail = ({ post, setSelectedPost, onBack, onDelete }) => {
     editable: false
   });
 
-  useEffect(() => {//에디터 내용 복원(json 파싱)
+  useEffect(() => {
     if (!editor || !post?.content) return;
 
     try {
       const parsed = JSON.parse(post.content);
       editor.commands.setContent(parsed);
-    } catch (e) {
-      console.error("에디터 복원 실패", e);
-    }
+    } catch (e) { }
   }, [editor, post]);
 
   return (
@@ -46,7 +44,7 @@ const BoardDetail = ({ post, setSelectedPost, onBack, onDelete }) => {
             fontSize: "16px",
             color: "#696b70",
             marginBottom: "12px",
-            flexWrap: "wrap", // 화면 좁으면 줄 바꿈 가능
+            flexWrap: "wrap",
             alignItems: "center",
           }}
         >

@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import { caxios } from "../../config/config";
+import useAuthStore from "../../store/useAuthStore";
+import { useNavigate } from "react-router-dom";
 
 function useMemberList(newRender) {
 
+    const logout = useAuthStore(state => state.logout);
+    const navi = useNavigate();
     const [data, setData] = useState([{}]);
 
     useEffect(() => {
         caxios.get("/user/userList")
             .then(resp => {
-                console.log(resp.data);
                 const formattedData = resp.data.map(user => {
-                    // 연락처 포맷팅
                     let formattedContact = user.contact;
                     if (formattedContact && formattedContact.length === 11) {
                         formattedContact = `${formattedContact.slice(0, 3)}-${formattedContact.slice(3, 7)}-${formattedContact.slice(7)}`;
@@ -20,8 +22,11 @@ function useMemberList(newRender) {
                         contact: formattedContact
                     };
                 });
-
                 setData(formattedData);
+            })
+            .catch(err => {
+                logout();
+                navi("/");
             })
     }, [newRender])
 
